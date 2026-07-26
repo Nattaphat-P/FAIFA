@@ -1,0 +1,136 @@
+/**
+ * Global CSS สำหรับ FAIFA
+ * - Tailwind CSS directives
+ * - ตัวแปรสีสำหรับระบบธีม
+ * - สไตล์พื้นฐานทั่วทั้งแอป
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== ตัวแปร CSS สำหรับระบบ Light/Dark Theme ===== */
+:root {
+  --bg-primary: #FDFBF7;
+  --bg-secondary: #F0E8D8;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8F4EB;
+  --text-primary: #162233;
+  --text-secondary: #4B5563;
+  --text-muted: #9CA3AF;
+  --border-color: #E5E7EB;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+.dark {
+  --bg-primary: #162233;
+  --bg-secondary: #1e2c3e;
+  --bg-card: #1e2c3e;
+  --bg-card-hover: #243346;
+  --text-primary: #F9FAFB;
+  --text-secondary: #D1D5DB;
+  --text-muted: #6B7280;
+  --border-color: #2a3a4e;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ===== สไตล์พื้นฐาน ===== */
+@layer base {
+  /* เปิด smooth scroll สำหรับทั้งหน้า */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* พื้นหลังและสีตัวอักษรตามธีม */
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ===== Custom Scrollbar ===== */
+@layer utilities {
+  /* ปรับแต่ง Scrollbar ให้สวยงาม */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--text-muted);
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+  }
+
+  /* เอฟเฟกต์ Glassmorphism สำหรับ Navbar และ Modal */
+  .glass {
+    background: rgba(22, 34, 51, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-light {
+    background: rgba(253, 251, 247, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  /* พื้นหลังเบลอสำหรับ Modal */
+  .modal-backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* เอฟเฟกต์เรืองแสงสำหรับปุ่ม */
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+  }
+
+  .glow-blue:hover {
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.5);
+  }
+
+  /* Gradient text สำหรับหัวข้อ */
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #3B82F6, #60A5FA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #F59E0B, #FCD34D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
+  }
+
+  /* Line clamp สำหรับตัดข้อความ */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Sidebar transition helper */
+  .sidebar-transition {
+    transition: width 0.3s ease, transform 0.3s ease;
+  }
+}
