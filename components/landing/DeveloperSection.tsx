@@ -16,7 +16,7 @@ const DEVELOPERS: Developer[] = [
   {
     name: "นาย ณัฐพัชร์",
     nickname: "Nut",
-    role: "UX/UI / แบบทดสอบ / เนื้อหา",
+    role: "UX/UI / แบบทดสอบ / พัฒนาเว็บ",
     imageSrc: "/img/Nut.jpg",
   },
   {
