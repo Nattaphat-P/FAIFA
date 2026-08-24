@@ -53,7 +53,7 @@ export default function UsageChart({ weeklyData, monthlyData }: UsageChartProps)
           <h3 className="text-base font-bold text-gray-900 dark:text-white">ระยะเวลาการใช้งาน</h3>
         </div>
         {/* Toggle สัปดาห์/เดือน */}
-        <div className="flex bg-dark-400/50 rounded-lg p-0.5">
+        <div className="flex bg-gray-100 dark:bg-dark-400/50 rounded-lg p-0.5">
           <button
             onClick={() => setViewMode("weekly")}
             className={`px-3 py-1 text-[11px] font-medium rounded-md transition-all ${
@@ -108,8 +108,8 @@ export default function UsageChart({ weeklyData, monthlyData }: UsageChartProps)
       ) : (
         /* Empty State */
         <div className="h-48 flex flex-col items-center justify-center">
-          <div className="w-12 h-12 rounded-xl bg-white/[0.04] flex items-center justify-center mb-3">
-            <svg className="w-6 h-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-white/[0.04] flex items-center justify-center mb-3">
+            <svg className="w-6 h-6 text-gray-400 dark:text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
             </svg>
           </div>

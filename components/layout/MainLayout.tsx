@@ -54,7 +54,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
   /* แสดง loading ขณะตรวจสอบ auth */
   if (isLoading || !user) {
     return (
-      <div className="min-h-screen bg-dark-300 flex items-center justify-center">
+      <div className="min-h-screen bg-cream dark:bg-dark-300 flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">
           <div className="w-10 h-10 border-2 border-primary-400/30 border-t-primary-400 rounded-full animate-spin" />
           <p className="text-gray-400 text-sm">กำลังโหลด...</p>

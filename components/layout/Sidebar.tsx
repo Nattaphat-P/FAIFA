@@ -127,11 +127,11 @@ export default function Sidebar({ onOpenSettings, collapsed, onToggleCollapse, m
   const sidebarContent = (
     <div className="flex flex-col h-full">
       {/* ===== ส่วนบนสุด: Logo + ปุ่ม Collapse ===== */}
-      <div className="flex items-center justify-between px-4 h-16 border-b border-white/[0.06]">
+      <div className="flex items-center justify-between px-4 h-16 border-b border-gray-200 dark:border-white/[0.06]">
         <Link href="/main" className="flex items-center gap-2.5 min-w-0">
           <span className="text-xl flex-shrink-0">⚡</span>
           {!collapsed && (
-            <span className="text-lg font-extrabold tracking-wide text-white whitespace-nowrap">
+            <span className="text-lg font-extrabold tracking-wide text-gray-900 dark:text-white whitespace-nowrap">
               FAIFA
             </span>
           )}
@@ -139,7 +139,7 @@ export default function Sidebar({ onOpenSettings, collapsed, onToggleCollapse, m
         {/* ปุ่มย่อ/ขยาย (Desktop เท่านั้น) */}
         <button
           onClick={onToggleCollapse}
-          className="hidden md:flex items-center justify-center w-8 h-8 rounded-lg text-gray-400 hover:text-white hover:bg-white/[0.06] transition-all"
+          className="hidden md:flex items-center justify-center w-8 h-8 rounded-lg text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/[0.06] transition-all"
           aria-label={collapsed ? "ขยาย Sidebar" : "ย่อ Sidebar"}
         >
           <MenuIcon name={collapsed ? "expand" : "collapse"} className="w-4 h-4" />
@@ -158,13 +158,13 @@ export default function Sidebar({ onOpenSettings, collapsed, onToggleCollapse, m
               className={`
                 group flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200
                 ${isActive
-                  ? "bg-primary-600/20 text-primary-400 shadow-[inset_0_0_0_1px_rgba(59,130,246,0.15)]"
-                  : "text-gray-400 hover:text-white hover:bg-white/[0.06]"
+                  ? "bg-primary-600/20 text-primary-600 dark:text-primary-400 shadow-[inset_0_0_0_1px_rgba(59,130,246,0.15)]"
+                  : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/[0.06]"
                 }
                 ${collapsed ? "justify-center" : ""}
               `}
             >
-              <span className={`flex-shrink-0 transition-colors ${isActive ? "text-primary-400" : "text-gray-500 group-hover:text-gray-300"}`}>
+              <span className={`flex-shrink-0 transition-colors ${isActive ? "text-primary-600 dark:text-primary-400" : "text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300"}`}>
                 <MenuIcon name={item.icon} />
               </span>
               {!collapsed && (
@@ -176,23 +176,23 @@ export default function Sidebar({ onOpenSettings, collapsed, onToggleCollapse, m
       </nav>
 
       {/* ===== เมนูล่างสุด ===== */}
-      <div className="px-3 py-4 border-t border-white/[0.06] space-y-1">
+      <div className="px-3 py-4 border-t border-gray-200 dark:border-white/[0.06] space-y-1">
         {/* การตั้งค่า */}
         <button
           onClick={onOpenSettings}
           title={collapsed ? "การตั้งค่า" : undefined}
-          className={`w-full group flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-gray-400 hover:text-white hover:bg-white/[0.06] transition-all duration-200 ${collapsed ? "justify-center" : ""}`}
+          className={`w-full group flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/[0.06] transition-all duration-200 ${collapsed ? "justify-center" : ""}`}
         >
-          <MenuIcon name="settings" className="w-5 h-5 text-gray-500 group-hover:text-gray-300 transition-colors" />
+          <MenuIcon name="settings" className="w-5 h-5 text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors" />
           {!collapsed && <span className="whitespace-nowrap">การตั้งค่า</span>}
         </button>
 
         {/* สนับสนุน */}
         <button
           title={collapsed ? "สนับสนุน" : undefined}
-          className={`w-full group flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-gray-400 hover:text-white hover:bg-white/[0.06] transition-all duration-200 ${collapsed ? "justify-center" : ""}`}
+          className={`w-full group flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/[0.06] transition-all duration-200 ${collapsed ? "justify-center" : ""}`}
         >
-          <MenuIcon name="support" className="w-5 h-5 text-gray-500 group-hover:text-gray-300 transition-colors" />
+          <MenuIcon name="support" className="w-5 h-5 text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors" />
           {!collapsed && <span className="whitespace-nowrap">สนับสนุน</span>}
         </button>
 
@@ -214,7 +214,7 @@ export default function Sidebar({ onOpenSettings, collapsed, onToggleCollapse, m
       {/* ===== Mobile Hamburger Button ===== */}
       <button
         onClick={onToggleMobile}
-        className="fixed top-4 left-4 z-[60] md:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-dark-200/90 backdrop-blur-md border border-white/[0.08] text-gray-300 hover:text-white transition-all shadow-lg"
+        className="fixed top-4 left-4 z-[60] md:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-white/90 dark:bg-dark-200/90 backdrop-blur-md border border-gray-200 dark:border-white/[0.08] text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all shadow-lg"
         aria-label="เปิดเมนู"
       >
         <MenuIcon name="hamburger" className="w-5 h-5" />
@@ -232,13 +232,12 @@ export default function Sidebar({ onOpenSettings, collapsed, onToggleCollapse, m
       <aside
         className={`
           fixed top-0 left-0 z-[80] h-screen
-          bg-dark-400/95 backdrop-blur-xl border-r border-white/[0.06]
+          bg-cream/95 dark:bg-dark-400/95 backdrop-blur-xl border-r border-gray-200 dark:border-white/[0.06]
           transition-all duration-300 ease-in-out
           md:translate-x-0
           ${collapsed ? "md:w-[72px]" : "md:w-[240px]"}
           ${mobileOpen ? "translate-x-0 w-[260px]" : "-translate-x-full w-[260px] md:translate-x-0"}
         `}
-        style={{ backgroundColor: "rgba(13, 21, 32, 0.97)" }}
       >
         {sidebarContent}
       </aside>

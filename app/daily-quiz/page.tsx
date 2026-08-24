@@ -179,10 +179,10 @@ export default function DailyQuizPage() {
       <div className="max-w-4xl mx-auto animate-fade-in">
         {/* ===== Header ===== */}
         <div className="mb-6">
-          <h1 className="text-2xl md:text-3xl font-extrabold text-white">
+          <h1 className="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white">
             คำถามรายวัน ⚡
           </h1>
-          <p className="text-sm text-gray-400 mt-1">
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
             ทดสอบความรู้ทุกวัน — สะสม XP เพื่อขึ้นอันดับ
           </p>
         </div>
@@ -191,38 +191,38 @@ export default function DailyQuizPage() {
           {/* ===== Left Column: Calendar + Streak ===== */}
           <div className="lg:col-span-1 space-y-4">
             {/* Streak Badge */}
-            <div className="bg-dark-200/60 border border-white/[0.06] rounded-2xl p-4">
+            <div className="bg-white dark:bg-dark-200/60 border border-gray-100 dark:border-white/[0.06] rounded-2xl p-4">
               <div className="flex items-center gap-3">
                 <div className="w-11 h-11 rounded-xl bg-accent-gold/10 flex items-center justify-center">
                   <span className="text-xl">🔥</span>
                 </div>
                 <div>
                   <p className="text-[11px] text-gray-500 uppercase tracking-wider font-medium">Streak ปัจจุบัน</p>
-                  <p className="text-2xl font-extrabold text-white">
-                    {streak} <span className="text-sm font-medium text-gray-400">วัน</span>
+                  <p className="text-2xl font-extrabold text-gray-900 dark:text-white">
+                    {streak} <span className="text-sm font-medium text-gray-500 dark:text-gray-400">วัน</span>
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Calendar */}
-            <div className="bg-dark-200/60 border border-white/[0.06] rounded-2xl p-4">
+            <div className="bg-white dark:bg-dark-200/60 border border-gray-100 dark:border-white/[0.06] rounded-2xl p-4">
               {/* Calendar Header */}
               <div className="flex items-center justify-between mb-3">
                 <button
                   onClick={goToPrevMonth}
-                  className="w-7 h-7 rounded-lg hover:bg-white/[0.06] flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+                  className="w-7 h-7 rounded-lg hover:bg-gray-100 dark:hover:bg-white/[0.06] flex items-center justify-center text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                   </svg>
                 </button>
-                <span className="text-sm font-bold text-white">
+                <span className="text-sm font-bold text-gray-900 dark:text-white">
                   {THAI_MONTHS[calMonth]} {calYear + 543}
                 </span>
                 <button
                   onClick={goToNextMonth}
-                  className="w-7 h-7 rounded-lg hover:bg-white/[0.06] flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+                  className="w-7 h-7 rounded-lg hover:bg-gray-100 dark:hover:bg-white/[0.06] flex items-center justify-center text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -262,12 +262,12 @@ export default function DailyQuizPage() {
                         relative w-full aspect-square rounded-lg text-[11px] font-medium
                         flex items-center justify-center transition-all duration-200
                         ${isFuture
-                          ? "text-gray-700 cursor-not-allowed"
+                          ? "text-gray-300 dark:text-gray-700 cursor-not-allowed"
                           : isSelected
                             ? "bg-primary-600 text-white shadow-md shadow-primary-600/30"
                             : isToday
-                              ? "bg-primary-600/20 text-primary-400 ring-1 ring-primary-500/30"
-                              : "text-gray-400 hover:bg-white/[0.06] hover:text-white"
+                              ? "bg-primary-600/20 text-primary-600 dark:text-primary-400 ring-1 ring-primary-500/30"
+                              : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/[0.06] hover:text-gray-900 dark:hover:text-white"
                         }
                       `}
                     >
@@ -287,14 +287,14 @@ export default function DailyQuizPage() {
 
           {/* ===== Right Column: Quiz ===== */}
           <div className="lg:col-span-2">
-            <div className="bg-dark-200/60 border border-white/[0.06] rounded-2xl p-5 lg:p-6">
+            <div className="bg-white dark:bg-dark-200/60 border border-gray-100 dark:border-white/[0.06] rounded-2xl p-5 lg:p-6">
               {/* Quiz Header */}
               <div className="flex items-center justify-between mb-5">
                 <div>
                   <p className="text-[11px] text-gray-500 uppercase tracking-wider font-medium mb-1">
                     คำถามประจำวัน
                   </p>
-                  <p className="text-xs text-gray-400">
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
                     {new Date(selectedDate + "T00:00:00").toLocaleDateString("th-TH", {
                       weekday: "long",
                       year: "numeric",
@@ -315,7 +315,7 @@ export default function DailyQuizPage() {
               </div>
 
               {/* Question */}
-              <h2 className="text-base md:text-lg font-bold text-white mb-6 leading-relaxed">
+              <h2 className="text-base md:text-lg font-bold text-gray-900 dark:text-white mb-6 leading-relaxed">
                 {quiz.question.question}
               </h2>
 
@@ -326,7 +326,7 @@ export default function DailyQuizPage() {
                   const isChosen = (result ? (selectedOption === idx || (result && idx === quiz.question.correctIndex)) : selectedOption === idx);
                   const showResult = !!result;
 
-                  let optionClass = "bg-white/[0.03] border-white/[0.08] hover:bg-white/[0.06] hover:border-white/[0.12]";
+                  let optionClass = "bg-gray-50 dark:bg-white/[0.03] border-gray-200 dark:border-white/[0.08] hover:bg-gray-100 dark:hover:bg-white/[0.06] hover:border-gray-300 dark:hover:border-white/[0.12]";
 
                   if (showResult) {
                     if (isCorrect) {
@@ -334,10 +334,10 @@ export default function DailyQuizPage() {
                     } else if (selectedOption === idx && !isCorrect) {
                       optionClass = "bg-red-500/10 border-red-500/30";
                     } else {
-                      optionClass = "bg-white/[0.02] border-white/[0.04] opacity-50";
+                      optionClass = "bg-gray-50 dark:bg-white/[0.02] border-gray-100 dark:border-white/[0.04] opacity-50";
                     }
                   } else if (selectedOption === idx) {
-                    optionClass = "bg-primary-600/15 border-primary-500/30 ring-1 ring-primary-500/20";
+                    optionClass = "bg-primary-50 dark:bg-primary-600/15 border-primary-300 dark:border-primary-500/30 ring-1 ring-primary-400/20 dark:ring-primary-500/20";
                   }
 
                   return (
@@ -359,8 +359,8 @@ export default function DailyQuizPage() {
                           : showResult && selectedOption === idx && !isCorrect
                             ? "bg-red-500/20 text-red-400"
                             : selectedOption === idx
-                              ? "bg-primary-600/30 text-primary-400"
-                              : "bg-white/[0.06] text-gray-500"
+                              ? "bg-primary-600/30 text-primary-600 dark:text-primary-400"
+                              : "bg-gray-100 dark:bg-white/[0.06] text-gray-500"
                         }
                       `}>
                         {String.fromCharCode(65 + idx)}
@@ -373,8 +373,8 @@ export default function DailyQuizPage() {
                           : showResult && selectedOption === idx && !isCorrect
                             ? "text-red-400"
                             : isChosen && !showResult
-                              ? "text-white font-medium"
-                              : "text-gray-300"
+                              ? "text-gray-900 dark:text-white font-medium"
+                              : "text-gray-600 dark:text-gray-300"
                       }`}>
                         {option}
                       </span>
@@ -406,14 +406,14 @@ export default function DailyQuizPage() {
                     ? "bg-accent-green/5 border-accent-green/20"
                     : "bg-red-500/5 border-red-500/20"
                 }`}>
-                  <p className="text-xs font-semibold mb-1 ${result.correct ? 'text-accent-green' : 'text-red-400'}">
+                  <p className={`text-xs font-semibold mb-1 ${result.correct ? 'text-accent-green' : 'text-red-400'}`}>
                     {result.correct ? "🎉 ถูกต้อง!" : "❌ ไม่ถูกต้อง"}
                   </p>
-                  <p className="text-xs text-gray-400 leading-relaxed">
+                  <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
                     {quiz.question.explanation}
                   </p>
                   {result.correct && (
-                    <p className="text-[11px] text-gray-500 mt-2">
+                    <p className="text-[11px] text-gray-400 dark:text-gray-500 mt-2">
                       คุณตอบเป็นคนที่ {result.answerOrder} — ได้รับ {result.xpEarned} XP
                     </p>
                   )}
@@ -429,7 +429,7 @@ export default function DailyQuizPage() {
                     w-full py-3 rounded-xl text-sm font-semibold text-white transition-all duration-200
                     ${selectedOption !== null
                       ? "bg-primary-600 hover:bg-primary-500 shadow-lg shadow-primary-600/20 active:scale-[0.99]"
-                      : "bg-gray-700/50 text-gray-500 cursor-not-allowed"
+                      : "bg-gray-300 dark:bg-gray-700/50 text-gray-500 cursor-not-allowed"
                     }
                   `}
                 >

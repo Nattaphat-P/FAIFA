@@ -60,51 +60,21 @@ const quizE_U3_L3: LessonQuizQuestion = {
   correctIndex: 1, explanation: "IC 555 ใช้สร้างสัญญาณพัลส์ (Astable), ตั้งเวลา (Monostable) และ Flip-Flop (Bistable)"
 };
 
-/* ===== Quiz สำหรับหลักสูตร ไฟฟ้าภายในบ้าน ===== */
-const quizH_U1_L1: LessonQuizQuestion = {
-  id: "quiz-h-u1-l1", question: "แรงดันไฟฟ้ามาตรฐานในบ้านเรือนไทยคือเท่าไร?",
-  options: ["110V", "220V", "380V", "440V"],
-  correctIndex: 1, explanation: "ไฟฟ้าในบ้านเรือนของไทยใช้แรงดัน 220V ความถี่ 50Hz"
+/* ===== Quiz สำหรับหลักสูตร ไฟฟ้าภายในบ้าน (เนื้อหาใหม่) ===== */
+const quizHomeelectric_1_1_1: LessonQuizQuestion = {
+  id: "quiz-Homeelectric_1_1.1", question: "จากกฎของโอห์ม ถ้าแรงดัน V = 12V และความต้านทาน R = 4Ω กระแสไฟฟ้า I มีค่าเท่าไร?",
+  options: ["2A", "3A", "48A", "8A"],
+  correctIndex: 1, explanation: "จากกฎของโอห์ม V = IR → I = V/R = 12/4 = 3A"
 };
-const quizH_U1_L2: LessonQuizQuestion = {
-  id: "quiz-h-u1-l2", question: "สายไฟ THW ขนาด 2.5 sq.mm. รองรับกระแสสูงสุดประมาณกี่แอมแปร์?",
-  options: ["10A", "15A", "20A", "25A"],
-  correctIndex: 2, explanation: "สาย THW 2.5 sq.mm. รองรับกระแสได้ประมาณ 20A (ตามมาตรฐาน วสท.)"
+const quizHomeelectric_1_1_2: LessonQuizQuestion = {
+  id: "quiz-Homeelectric_1_1.2", question: "ตัวต้านทาน 2 ตัว ค่า 100Ω และ 200Ω ต่ออนุกรมกัน ค่าความต้านทานรวมเท่ากับเท่าไร?",
+  options: ["66.7Ω", "150Ω", "300Ω", "20,000Ω"],
+  correctIndex: 2, explanation: "วงจรอนุกรม: R_total = R1 + R2 = 100 + 200 = 300Ω"
 };
-const quizH_U1_L3: LessonQuizQuestion = {
-  id: "quiz-h-u1-l3", question: "เต้ารับแบบมีสายดิน (Ground) มีกี่ช่อง?",
-  options: ["2 ช่อง", "3 ช่อง", "4 ช่อง", "5 ช่อง"],
-  correctIndex: 1, explanation: "เต้ารับแบบมีสายดินมี 3 ช่อง คือ Line, Neutral และ Ground"
-};
-const quizH_U2_L1: LessonQuizQuestion = {
-  id: "quiz-h-u2-l1", question: "สวิตช์ 2 ทาง (2-way switch) ใช้ทำอะไร?",
-  options: ["ควบคุมไฟจากจุดเดียว", "ควบคุมไฟจาก 2 จุด", "ควบคุมพัดลม", "ตัดไฟฉุกเฉิน"],
-  correctIndex: 1, explanation: "สวิตช์ 2 ทางใช้ควบคุมไฟจาก 2 จุดที่ต่างกัน เช่น ต้นบันไดและปลายบันได"
-};
-const quizH_U2_L2: LessonQuizQuestion = {
-  id: "quiz-h-u2-l2", question: "เบรกเกอร์ (Circuit Breaker) ทำหน้าที่อะไร?",
-  options: ["เพิ่มแรงดัน", "ตัดวงจรเมื่อกระแสเกิน", "แปลงไฟ AC เป็น DC", "ลดความถี่"],
-  correctIndex: 1, explanation: "เบรกเกอร์ตัดวงจรอัตโนมัติเมื่อกระแสเกินค่าที่กำหนด เพื่อป้องกันอันตราย"
-};
-const quizH_U2_L3: LessonQuizQuestion = {
-  id: "quiz-h-u2-l3", question: "สายดิน (Ground) มีสีอะไรตามมาตรฐาน?",
-  options: ["แดง", "น้ำเงิน", "เขียว-เหลือง", "ดำ"],
-  correctIndex: 2, explanation: "สายดินตามมาตรฐาน IEC ใช้สีเขียว-เหลือง (Green-Yellow)"
-};
-const quizH_U3_L1: LessonQuizQuestion = {
-  id: "quiz-h-u3-l1", question: "ท่อร้อยสายไฟสีเหลืองใช้สำหรับงานประเภทใด?",
-  options: ["ฝังผนัง/ฝังดิน", "เดินลอย", "กลางแจ้ง", "ใต้น้ำ"],
-  correctIndex: 0, explanation: "ท่อสีเหลือง (PVC) ใช้สำหรับงานฝังผนังหรือฝังดิน"
-};
-const quizH_U3_L2: LessonQuizQuestion = {
-  id: "quiz-h-u3-l2", question: "ถ้าเบรกเกอร์ตัดบ่อย ควรทำอย่างไรก่อน?",
-  options: ["เพิ่มขนาดเบรกเกอร์ทันที", "ตรวจสอบโหลดที่ใช้งาน", "เปลี่ยนสายไฟ", "ถอดเบรกเกอร์ออก"],
-  correctIndex: 1, explanation: "ควรตรวจสอบโหลด (เครื่องใช้ไฟฟ้า) ที่ใช้งานว่าเกินพิกัดหรือไม่ ก่อนแก้ไข"
-};
-const quizH_U3_L3: LessonQuizQuestion = {
-  id: "quiz-h-u3-l3", question: "ถ้ามีคนถูกไฟดูด สิ่งแรกที่ต้องทำคืออะไร?",
-  options: ["จับตัวผู้ถูกดูดดึงออก", "ตัดไฟที่เบรกเกอร์/ถอดปลั๊ก", "ราดน้ำ", "โทรเรียกรถพยาบาลทันที"],
-  correctIndex: 1, explanation: "สิ่งแรกที่ต้องทำคือตัดแหล่งจ่ายไฟ (เบรกเกอร์/ถอดปลั๊ก) ก่อน ห้ามจับตัวผู้ถูกดูดโดยตรง"
+const quizHomeelectric_1_1_3: LessonQuizQuestion = {
+  id: "quiz-Homeelectric_1_1.3", question: "เหตุผลหลักที่ระบบไฟฟ้าในบ้านใช้ไฟ AC แทน DC คืออะไร?",
+  options: ["AC ผลิตง่ายกว่า DC", "AC แปลงแรงดันขึ้น-ลงด้วยหม้อแปลงได้ง่าย จึงส่งไฟระยะไกลสูญเสียน้อย", "AC ปลอดภัยกว่า DC เสมอ", "DC ผลิตไม่ได้ในปริมาณมาก"],
+  correctIndex: 1, explanation: "ข้อได้เปรียบหลักของ AC คือสามารถใช้หม้อแปลงเพิ่ม/ลดแรงดันได้อย่างง่ายดาย การส่งไฟฟ้าแรงดันสูงทำให้สูญเสียพลังงานน้อย (P_loss = I²R) จึงเหมาะกับการจ่ายไฟระยะไกลให้ทุกบ้าน"
 };
 
 /* ===== Quiz สำหรับหลักสูตร วิศวกรรมระบบไฟฟ้า ===== */
@@ -178,19 +148,9 @@ const electronicsUnit3Lessons: Lesson[] = [
 
 /* ===== Lessons สำหรับ ไฟฟ้าภายในบ้าน ===== */
 const homeUnit1Lessons: Lesson[] = [
-  { id: "h-u1-l1", unitId: "h-u1", title: "ระบบไฟฟ้าในบ้าน", content: "ระบบไฟฟ้าภายในบ้านประกอบด้วย:\n\n1. มิเตอร์ไฟฟ้า (จาก กฟน./กฟภ.)\n2. ตู้คอนซูเมอร์ (Consumer Unit) — เบรกเกอร์หลัก + เบรกเกอร์ย่อย\n3. สายไฟฟ้า (วงจรย่อย)\n4. อุปกรณ์ปลายทาง (เต้ารับ, สวิตช์, โคมไฟ)\n\nแรงดันไฟฟ้ามาตรฐาน: 220V AC, 50Hz", order: 1, difficulty: 1, status: "locked", quiz: quizH_U1_L1 },
-  { id: "h-u1-l2", unitId: "h-u1", title: "สายไฟและขนาด", content: "สายไฟที่ใช้ในบ้านมีหลายชนิด:\n\n- **THW**: สายเดี่ยวหุ้มฉนวน PVC ใช้ร้อยท่อ\n- **VAF**: สายแบนมีเปลือก ใช้เดินลอย\n- **VCT**: สายอ่อนหลายแกน ใช้กับเครื่องใช้ไฟฟ้า\n\nการเลือกขนาด: ขึ้นอยู่กับกระแสที่ต้องใช้\n- 1.5 sq.mm. → 15A (แสงสว่าง)\n- 2.5 sq.mm. → 20A (เต้ารับทั่วไป)\n- 4.0 sq.mm. → 25A (แอร์, เครื่องทำน้ำอุ่น)", order: 2, difficulty: 1, status: "locked", quiz: quizH_U1_L2 },
-  { id: "h-u1-l3", unitId: "h-u1", title: "เต้ารับและปลั๊กไฟ", content: "เต้ารับมาตรฐานในประเทศไทย:\n\n- **แบบ 2 ช่อง**: มีเฉพาะ Line และ Neutral (ไม่ปลอดภัย)\n- **แบบ 3 ช่อง**: มี Line, Neutral และ Ground (ปลอดภัยกว่า)\n\nข้อควรระวัง:\n- ติดตั้งสูงจากพื้นอย่างน้อย 30 ซม.\n- ห้องน้ำต้องใช้เต้ารับกันน้ำ (IP44 ขึ้นไป)\n- ไม่ควรเสียบปลั๊กหลายอันจนเกินพิกัด", order: 3, difficulty: 2, status: "locked", quiz: quizH_U1_L3 },
-];
-const homeUnit2Lessons: Lesson[] = [
-  { id: "h-u2-l1", unitId: "h-u2", title: "สวิตช์ไฟฟ้า", content: "สวิตช์ไฟฟ้ามีหลายชนิด:\n\n- **สวิตช์ทางเดียว (1-way)**: เปิด-ปิดจากจุดเดียว\n- **สวิตช์ 2 ทาง (2-way)**: ควบคุมจาก 2 จุด เช่น บันได\n- **Dimmer Switch**: ปรับความสว่าง\n\nการเดินสาย 2 ทาง:\n- ใช้สวิตช์ 2 ตัว ต่อสาย Traveler 2 เส้นระหว่างกัน", order: 1, difficulty: 2, status: "locked", quiz: quizH_U2_L1 },
-  { id: "h-u2-l2", unitId: "h-u2", title: "เบรกเกอร์และฟิวส์", content: "อุปกรณ์ป้องกันกระแสเกิน:\n\n**เบรกเกอร์ (Circuit Breaker)**:\n- MCB: ป้องกันกระแสเกิน/ลัดวงจร\n- RCBO/RCD: ป้องกันไฟรั่ว\n\nการเลือกขนาด:\n- แสงสว่าง: 10-16A\n- เต้ารับ: 16-20A\n- แอร์: 20-32A\n\n**ห้ามใช้เบรกเกอร์ใหญ่เกินไป** จะไม่ตัดวงจรเมื่อเกิดปัญหา", order: 2, difficulty: 2, status: "locked", quiz: quizH_U2_L2 },
-  { id: "h-u2-l3", unitId: "h-u2", title: "ระบบกราวด์", content: "ระบบสายดิน (Ground/Earth) สำคัญมากเพื่อความปลอดภัย:\n\n**หลักการ**: ต่อสายจากเปลือกโลหะเครื่องใช้ไฟฟ้าลงดิน\n→ ถ้ามีไฟรั่ว กระแสจะไหลลงดินแทนที่จะผ่านร่างกายคน\n\n**การติดตั้ง**:\n- ตอกหลักดินทองแดงลงดินลึกอย่างน้อย 2.4 ม.\n- ค่าความต้านทานดินไม่เกิน 5 Ω\n- ต้องต่อร่วมกับ RCD/RCBO", order: 3, difficulty: 3, status: "locked", quiz: quizH_U2_L3 },
-];
-const homeUnit3Lessons: Lesson[] = [
-  { id: "h-u3-l1", unitId: "h-u3", title: "การเดินสายไฟ", content: "เทคนิคการเดินสายไฟในบ้าน:\n\n**การเดินร้อยท่อ (Conduit)**:\n- ท่อ PVC สีเหลือง: ฝังผนัง/ฝังดิน\n- ท่อ PVC สีขาว: เดินลอย\n- ท่อโลหะ (EMT): งานหนัก\n\n**ข้อควรระวัง**:\n- สายไฟในท่อต้องไม่เกิน 40% ของพื้นที่ท่อ\n- ห้ามใช้สายไฟต่อกลางท่อ\n- จุดต่อต้องอยู่ในกล่องต่อสาย (Junction Box)", order: 1, difficulty: 3, status: "locked", quiz: quizH_U3_L1 },
-  { id: "h-u3-l2", unitId: "h-u3", title: "การตรวจสอบระบบไฟฟ้า", content: "วิธีตรวจหาจุดบกพร่อง:\n\n1. **ตรวจแรงดัน**: วัดที่เต้ารับ ต้องได้ 220V ±10%\n2. **ตรวจสายดิน**: วัดค่าระหว่าง Ground กับ Neutral ต้องใกล้ 0V\n3. **ตรวจฉนวน**: ใช้ Megger วัดค่า ≥ 1 MΩ\n4. **ตรวจเบรกเกอร์**: กด Test ที่ RCD ต้องตัดภายใน 30ms\n\n**ปัญหาที่พบบ่อย**: ไฟตก, ไฟกระพริบ, เบรกเกอร์ตัดบ่อย", order: 2, difficulty: 3, status: "locked", quiz: quizH_U3_L2 },
-  { id: "h-u3-l3", unitId: "h-u3", title: "ความปลอดภัยทางไฟฟ้า", content: "กฎความปลอดภัยทางไฟฟ้า:\n\n**ก่อนทำงาน**:\n- ตัดไฟที่เบรกเกอร์เสมอ\n- ใช้มัลติมิเตอร์ตรวจว่าไม่มีไฟ\n- ใช้เครื่องมือที่หุ้มฉนวน\n\n**การปฐมพยาบาล**:\n1. ตัดแหล่งจ่ายไฟ (ห้ามจับตัวผู้ถูกดูดโดยตรง)\n2. เรียกรถพยาบาล 1669\n3. ถ้าหยุดหายใจ ทำ CPR ทันที\n\n**ข้อห้าม**: ห้ามใช้น้ำดับไฟที่เกิดจากไฟฟ้า", order: 3, difficulty: 2, status: "locked", quiz: quizH_U3_L3 },
+  { id: "Homeelectric_1_1.1", unitId: "Homeelectric_1", title: "ปริมาณทางไฟฟ้าและความสัมพันธ์ V–I–R", content: "ปริมาณทางไฟฟ้าที่สำคัญ ได้แก่:\n\n- **แรงดันไฟฟ้า (V)**: แรงผลักดันที่ทำให้กระแสไฟฟ้าไหล หน่วยเป็น โวลต์ (Volt)\n- **กระแสไฟฟ้า (I)**: ปริมาณประจุไฟฟ้าที่ไหลผ่านวงจร หน่วยเป็น แอมแปร์ (Ampere)\n- **ความต้านทาน (R)**: การขัดขวางการไหลของกระแส หน่วยเป็น โอห์ม (Ohm)\n\n**ความสัมพันธ์ (กฎของโอห์ม): V = I × R**\nใช้เพื่อคำนวณหาค่าต่างๆ ในวงจร หากแรงดันเพิ่ม กระแสจะเพิ่ม (ถักความต้านทานคงที่)", order: 1, difficulty: 1, status: "locked", quiz: quizHomeelectric_1_1_1 },
+  { id: "Homeelectric_1_1.2", unitId: "Homeelectric_1", title: "วงจรอนุกรม ขนาน ผสม", content: "การต่อวงจรไฟฟ้ามี 3 รูปแบบหลัก:\n\n**1. วงจรอนุกรม (Series)**:\n- กระแส (I) ไหลผ่านอุปกรณ์ทุกตัวเท่ากัน\n- แรงดัน (V) แบ่งกันไปตามอุปกรณ์แต่ละตัว\n- หากตัวใดขาด วงจรจะดับทั้งหมด\n\n**2. วงจรขนาน (Parallel)**:\n- แรงดัน (V) ตกคร่อมอุปกรณ์ทุกตัวเท่ากัน\n- กระแส (I) แบ่งไหลไปตามแต่ละสาย\n- หากตัวใดขาด ตัวอื่นยังทำงานได้ (นิยมใช้ในบ้าน)\n\n**3. วงจรผสม (Compound)**: นำทั้งสองแบบมารวมกัน", order: 2, difficulty: 2, status: "locked", quiz: quizHomeelectric_1_1_2 },
+  { id: "Homeelectric_1_1.3", unitId: "Homeelectric_1", title: "AC vs DC และทำไมไฟบ้านใช้ AC", content: "**กระแสตรง (DC)**: ไหลทิศทางเดียวเสมอ เช่น แบตเตอรี่ ถ่านไฟฉาย โซลาร์เซลล์\n\n**กระแสสลับ (AC)**: ไหลกลับทิศทางไปมาอย่างรวดเร็ว (50 ครั้ง/วินาที ในไทย) เช่น ไฟที่มาจากโรงไฟฟ้า\n\n**เหตุผลที่ไฟบ้านใช้ AC**:\n1. **แปลงแรงดันง่าย**: ใช้หม้อแปลงเพิ่ม/ลดแรงดันได้\n2. **ส่งระยะไกลได้ดี**: การเพิ่มแรงดันสูงมากๆ (เช่น 230kV) ทำให้ลดการสูญเสียพลังงานในสายส่งได้มาก จากนั้นค่อยลดแรงดันลงเหลือ 220V ก่อนเข้าบ้าน", order: 3, difficulty: 2, status: "locked", quiz: quizHomeelectric_1_1_3 },
 ];
 
 /* ===== Lessons สำหรับ วิศวกรรมระบบไฟฟ้า ===== */
@@ -230,15 +190,13 @@ export const TRACKS: Track[] = [
   },
   {
     id: "home-electrical",
-    title: "ไฟฟ้า",
+    title: "ไฟฟ้าภายในบ้าน",
     description: "เจาะลึกระบบไฟฟ้า แม่เหล็กไฟฟ้า การควบคุมมอเตอร์ และโครงสร้างพื้นฐานระบบส่งกำลังไฟฟ้าแรงสูง",
     icon: "⚡",
     color: "#F59E0B",
     progress: 0,
     units: [
-      { id: "h-u1", trackId: "home-electrical", title: "พื้นฐานไฟฟ้าในบ้าน", description: "โครงสร้างระบบไฟฟ้าภายในบ้าน", order: 1, duration: 45, lessonsCount: 3, labCount: 1, quizCount: 3, difficulty: 1, lessons: homeUnit1Lessons, status: "locked" },
-      { id: "h-u2", trackId: "home-electrical", title: "อุปกรณ์ป้องกัน", description: "เบรกเกอร์ ฟิวส์ และระบบกราวด์", order: 2, duration: 50, lessonsCount: 3, labCount: 2, quizCount: 3, difficulty: 2, lessons: homeUnit2Lessons, status: "locked" },
-      { id: "h-u3", trackId: "home-electrical", title: "การเดินสายไฟ", description: "เทคนิคการเดินสายและความปลอดภัย", order: 3, duration: 60, lessonsCount: 3, labCount: 1, quizCount: 3, difficulty: 3, lessons: homeUnit3Lessons, status: "locked" },
+      { id: "Homeelectric_1", trackId: "home-electrical", title: "พื้นฐานไฟฟ้าที่ต้องรู้ก่อนใช้งานจริง", description: "โครงสร้างระบบไฟฟ้าภายในบ้าน", order: 1, duration: 45, lessonsCount: 3, labCount: 1, quizCount: 3, difficulty: 1, lessons: homeUnit1Lessons, status: "locked" },
     ],
   },
   {
